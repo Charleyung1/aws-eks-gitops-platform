@@ -17,12 +17,7 @@ The solution follows GitOps principles by separating application code, infrastru
 
 The architecture below illustrates the complete deployment workflow from source code to production.
 
-> 📷 **Screenshot 1 – Architecture Diagram**
-
-```
-screenshots/
-└── architecture-diagram.png
-```
+<img width="1440" height="900" alt="architecture-diagram" src="https://github.com/user-attachments/assets/dcd0c62a-fa1c-40b2-a709-cbf887efd362" />
 
 ---
 
@@ -80,12 +75,8 @@ The solution is divided into three repositories following GitOps best practices.
 | **vprofile-infra** | AWS infrastructure provisioning using Terraform |
 | **vprofile-helm** | Helm charts and ArgoCD deployment configuration |
 
-> 📷 **Screenshot 2 – Three GitHub Repositories**
+<img width="342" height="551" alt="github-repositories" src="https://github.com/user-attachments/assets/950fd4cb-fdf5-40ab-8a38-e9ff9f390f29" />
 
-```
-screenshots/
-└── github-repositories.png
-```
 
 ---
 
