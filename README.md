@@ -108,7 +108,7 @@ Every push to the **main** branch automatically triggers the pipeline, which per
 
 ## Code Quality Validation
 
-SonarQube performs static code analysis and enforces quality gates before container images are built.
+Before a Docker image is built, the pipeline performs static code analysis using SonarQube to evaluate code quality, maintainability, and potential security issues. The configured Quality Gate prevents the pipeline from continuing if predefined standards are not met, ensuring only validated code progresses to the containerization stage.
 
 > 📷 **Screenshot 3 – SonarQube Dashboard**
 
@@ -191,7 +191,7 @@ GitHub Actions automates:
 
 ## Amazon EKS Cluster
 
-Terraform provisions the Kubernetes cluster and supporting infrastructure automatically.
+The infrastructure repository provisions the complete Kubernetes environment using Terraform. This includes the VPC, networking components, IAM roles, managed node groups, and the Amazon EKS control plane. Automating infrastructure provisioning ensures consistency, repeatability, and eliminates manual configuration across environments.
 
 > 📷 **Screenshot 7 – Amazon EKS Cluster**
 
@@ -235,13 +235,8 @@ No manual **kubectl apply** commands are required.
 
 ## ArgoCD Synchronization
 
-ArgoCD continuously ensures the live Kubernetes cluster matches the desired Git state.
+ArgoCD implements the GitOps deployment model by continuously monitoring the Helm repository for configuration changes. Whenever the CI pipeline updates the application image tag, ArgoCD detects the commit, compares the desired state stored in Git with the live Kubernetes cluster, and automatically performs a rolling deployment. Self-healing and automatic pruning ensure the cluster always remains synchronized with the repository.
 
-Automatic features include:
-
-- Continuous Synchronization
-- Self-Healing
-- Automatic Pruning
 
 > 📷 **Screenshot 9 – ArgoCD Healthy & Synced**
 
