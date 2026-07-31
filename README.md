@@ -125,14 +125,16 @@ screenshots/
 
 ## GitHub Secrets & Variables
 
-Sensitive credentials are securely managed using GitHub Secrets and Variables.
+Sensitive credentials are securely managed using GitHub Secrets to prevent exposure in source code and CI/CD workflows.
 
-Examples include:
+The configured secrets include:
 
-- AWS Credentials
+- AWS Access Key ID
+- AWS Secret Access Key
 - SonarQube Token
-- Amazon ECR Registry
-- Repository Configuration
+- GitOps Personal Access Token
+- Helm Repository User
+- Slack Webhook URL
 
 > 📷 **Screenshot 4 – GitHub Secrets & Variables**
 
@@ -208,7 +210,8 @@ screenshots/
 
 ## Slack Notifications
 
-The infrastructure workflow sends Slack notifications after successful deployments, improving operational visibility.
+After the Terraform infrastructure workflow completes successfully, GitHub Actions automatically sends a notification to the configured Slack channel. The notification includes the workflow status, repository name, branch, triggering user, and a link to the workflow run, enabling the team to monitor infrastructure provisioning in real time.
+
 
 > 📷 **Screenshot 8 – Slack Notification**
 
@@ -217,7 +220,6 @@ screenshots/
 └── slack-notification.png
 ```
 
----
 
 # 🚀 GitOps Deployment (vprofile-helm)
 
