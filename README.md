@@ -1,11 +1,6 @@
 # 🚀 End-to-End GitOps CI/CD Pipeline on AWS
+AWS | Terraform | Kubernetes | Docker | GitHub Actions | ArgoCD | Helm | SonarQube
 ### Automated Application Delivery with GitHub Actions, Terraform, Amazon EKS, Helm & ArgoCD
-
-## Source Repositories
-
-- 📦 **Application:** https://github.com/Charleyung1/vprofile-app
-- ☁️ **Infrastructure:** https://github.com/Charleyung1/vprofile-infra
-- 🚀 **GitOps Deployment:** https://github.com/Charleyung1/vprofile-helm
 
 > A production-style GitOps CI/CD pipeline that automates the complete software delivery lifecycle—from code commit to Kubernetes deployment on Amazon EKS—using modern DevOps practices.
 
@@ -18,6 +13,15 @@ This project demonstrates the implementation of a **production-ready GitOps pipe
 The solution follows GitOps principles by separating application code, infrastructure, and Kubernetes configuration into dedicated repositories. Every infrastructure and deployment change is version-controlled, enabling automated delivery with minimal manual intervention.
 
 ---
+
+## Source Repositories
+
+- 📦 **Application:** [vprofile-app](https://github.com/Charleyung1/vprofile-app)
+- ☁️ **Infrastructure:** [vprofile-infra](https://github.com/Charleyung1/vprofile-infra)
+- 🚀 **GitOps Deployment:** [vprofile-helm](https://github.com/Charleyung1/vprofile-helm)
+
+---
+
 
 # 🏗️ Architecture
 
@@ -295,6 +299,20 @@ Application Available
 
 ---
 
+## 📊 Project Metrics
+
+| Metric | Value |
+|--------|------:|
+| GitHub Repositories | 3 |
+| AWS Services Used | 6 |
+| CI/CD Pipelines | 2 |
+| Terraform Resources | 20+ |
+| Kubernetes Cluster | Amazon EKS |
+| Deployment Strategy | GitOps |
+
+---
+
+
 # 📈 Results
 
 This project successfully demonstrates:
@@ -350,11 +368,11 @@ These challenges reinforced several important DevOps practices:
 
 **LinkedIn**
 
-https://linkedin.com/in/YOUR-LINKEDIN
+https://www.linkedin.com/in/charles-ekairia-44797821b/
 
 **GitHub**
 
-https://github.com/YOUR-GITHUB
+https://github.com/Charleyung1
 
 ---
 
