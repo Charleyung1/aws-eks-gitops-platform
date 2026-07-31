@@ -1,6 +1,12 @@
 # 🚀 End-to-End GitOps CI/CD Pipeline on AWS
 ### Automated Application Delivery with GitHub Actions, Terraform, Amazon EKS, Helm & ArgoCD
 
+## Source Repositories
+
+- 📦 **Application:** https://github.com/Charleyung1/vprofile-app
+- ☁️ **Infrastructure:** https://github.com/Charleyung1/vprofile-infra
+- 🚀 **GitOps Deployment:** https://github.com/Charleyung1/vprofile-helm
+
 > A production-style GitOps CI/CD pipeline that automates the complete software delivery lifecycle—from code commit to Kubernetes deployment on Amazon EKS—using modern DevOps practices.
 
 ---
@@ -65,17 +71,20 @@ The architecture below illustrates the complete deployment workflow from source 
 
 ---
 
-# 📂 Repository Structure
 
-The solution is divided into three repositories following GitOps best practices.
+
+# 📂 Repository Responsibilities
+
+The platform follows the GitOps principle of separating application code, infrastructure, and deployment configuration into independent repositories.
 
 | Repository | Responsibility |
 |------------|----------------|
-| **vprofile-app** | Application source code and CI pipeline |
-| **vprofile-infra** | AWS infrastructure provisioning using Terraform |
-| **vprofile-helm** | Helm charts and ArgoCD deployment configuration |
+| **vprofile-app** | Java application source code, Dockerfile, Maven build, GitHub Actions CI pipeline, SonarQube analysis, Amazon ECR image publishing. |
+| **vprofile-infra** | Terraform code provisioning AWS networking, IAM roles, Amazon EKS cluster, managed node groups, and GitHub Actions infrastructure automation. |
+| **vprofile-helm** | Helm charts, Kubernetes manifests, ArgoCD Application configuration, and GitOps deployment automation. |
 
 <img width="342" height="551" alt="github-repositories" src="https://github.com/user-attachments/assets/950fd4cb-fdf5-40ab-8a38-e9ff9f390f29" />
+
 
 
 ---
