@@ -79,7 +79,7 @@ The architecture below illustrates the complete deployment workflow from source 
 
 # 📂 Repository Responsibilities
 
-The platform follows the GitOps principle of separating application code, infrastructure, and deployment configuration into independent repositories.
+The project is intentionally divided into separate repositories to follow GitOps best practices by separating application code, infrastructure, and deployment configuration. This modular approach simplifies maintenance, enables independent versioning, and mirrors production engineering workflows.
 
 | Repository | Responsibility |
 |------------|----------------|
@@ -366,13 +366,8 @@ These challenges reinforced several important DevOps practices:
 
 # 📬 Connect With Me
 
-**LinkedIn**
-
-https://www.linkedin.com/in/charles-ekairia-44797821b/
-
-**GitHub**
-
-https://github.com/Charleyung1
+- 💼 LinkedIn: https://www.linkedin.com/in/charles-ekairia-44797821b/
+- 💻 GitHub: https://github.com/Charleyung1
 
 ---
 
