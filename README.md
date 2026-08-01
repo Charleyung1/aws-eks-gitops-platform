@@ -252,7 +252,7 @@ After ArgoCD synchronization, the application is successfully deployed and acces
 > 📷 **Screenshot 10 – Running Application**
 
  
-![application](screenshot/running-application.png)
+
 
 
 ---
