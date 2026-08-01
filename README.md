@@ -27,7 +27,7 @@ The solution follows GitOps principles by separating application code, infrastru
 
 The architecture below illustrates the complete deployment workflow from source code to production.
 
-<img width="1440" height="900" alt="architecture-diagram" src="https://github.com/user-attachments/assets/dcd0c62a-fa1c-40b2-a709-cbf887efd362" />
+![Architecture Diagram](architecture/architecture-diagram.png)
 
 ---
 
@@ -87,7 +87,7 @@ The project is intentionally divided into separate repositories to follow GitOps
 | **vprofile-infra** | Terraform code provisioning AWS networking, IAM roles, Amazon EKS cluster, managed node groups, and GitHub Actions infrastructure automation. |
 | **vprofile-helm** | Helm charts, Kubernetes manifests, ArgoCD Application configuration, and GitOps deployment automation. |
 
-<img width="342" height="551" alt="github-repositories" src="https://github.com/user-attachments/assets/950fd4cb-fdf5-40ab-8a38-e9ff9f390f29" />
+![Repo](screenshot/github-repositories.png)
 
 
 
@@ -114,12 +114,10 @@ Every push to the **main** branch automatically triggers the pipeline, which per
 
 Before a Docker image is built, the pipeline performs static code analysis using SonarQube to evaluate code quality, maintainability, and potential security issues. The configured Quality Gate prevents the pipeline from continuing if predefined standards are not met, ensuring only validated code progresses to the containerization stage.
 
-> 📷 **Screenshot 3 – SonarQube Dashboard**
+> 📷 **Screenshot 3 – SonarQube Project Analysis with Quality Gate Passed**
 
-```
-screenshots/
-└── sonarqube-dashboard.png
-```
+![Sonar](screenshot/sonarqube-dashboard.png)
+
 
 ---
 
@@ -138,10 +136,9 @@ The configured secrets include:
 
 > 📷 **Screenshot 4 – GitHub Secrets & Variables**
 
-```
-screenshots/
-└── github-secrets.png
-```
+
+![github secret](screenshot/github-secrets.png)
+
 
 ---
 
@@ -149,12 +146,11 @@ screenshots/
 
 After validation, GitHub Actions successfully builds and publishes the application container image.
 
-> 📷 **Screenshot 5 – GitHub Actions Pipeline**
+> 📷 **Screenshot 5 – Successful GitHub Actions CI Pipeline Execution**
 
-```
-screenshots/
-└── github-actions-success.png
-```
+
+![github action](screenshot/github-actions-success.png)
+
 
 ---
 
@@ -164,10 +160,9 @@ Each successful build produces a versioned Docker image tagged with the Git comm
 
 > 📷 **Screenshot 6 – Amazon ECR Image**
 
-```
-screenshots/
-└── ecr-image.png
-```
+
+![ecr image](screenshot/ecr-image.png)
+
 
 ---
 
@@ -201,10 +196,9 @@ The infrastructure repository provisions the complete Kubernetes environment usi
 
 > 📷 **Screenshot 7 – Amazon EKS Cluster**
 
-```
-screenshots/
-└── eks-cluster.png
-```
+
+![eks cluster](screenshot/eks-cluster.png)
+
 
 ---
 
@@ -215,10 +209,9 @@ After the Terraform infrastructure workflow completes successfully, GitHub Actio
 
 > 📷 **Screenshot 8 – Slack Notification**
 
-```
-screenshots/
-└── slack-notification.png
-```
+
+![slack](screenshot/slack-notification.png)
+
 
 
 # 🚀 GitOps Deployment (vprofile-helm)
@@ -246,10 +239,9 @@ ArgoCD implements the GitOps deployment model by continuously monitoring the Hel
 
 > 📷 **Screenshot 9 – ArgoCD Healthy & Synced**
 
-```
-screenshots/
-└── argocd-sync.png
-```
+
+![argocd](screenshot/argocd-sync.png)
+
 
 ---
 
@@ -259,10 +251,9 @@ After ArgoCD synchronization, the application is successfully deployed and acces
 
 > 📷 **Screenshot 10 – Running Application**
 
-```
-screenshots/
-└── running-application.png
-```
+ 
+![application](screenshot/running-application.png)
+
 
 ---
 
