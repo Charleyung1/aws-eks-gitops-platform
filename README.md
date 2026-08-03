@@ -292,6 +292,46 @@ Application Available
 
 ---
 
+# ⏪ Rollback Strategy
+
+This project follows a GitOps deployment model where Git serves as the single source of truth for the Kubernetes cluster. If a deployment introduces an issue, the application can be restored by reverting the corresponding commit in the GitOps repository that updated the Helm chart image tag.
+
+### Rollback Process
+
+1. Identify the last known stable commit in the GitOps repository.
+2. Revert the commit that updated the Helm chart image tag.
+3. Push the reverted commit to GitHub.
+4. ArgoCD automatically detects the Git change.
+5. ArgoCD synchronizes the Kubernetes cluster back to the previous application version without requiring manual `kubectl` commands.
+
+Because Docker images are tagged using immutable Git commit SHAs, every deployment is fully traceable, making rollbacks reliable, repeatable, and easy to audit.
+
+```
+
+Bad Deployment
+       │
+       ▼
+Revert Git Commit
+       │
+       ▼
+GitHub Repository
+       │
+       ▼
+ArgoCD Detects Change
+       │
+       ▼
+Sync Previous Image
+       │
+       ▼
+Application Restored
+```
+
+---
+
+
+
+
+
 ## 📊 Project Metrics
 
 | Metric | Value |
@@ -299,7 +339,7 @@ Application Available
 | GitHub Repositories | 3 |
 | AWS Services Used | 6 |
 | CI/CD Pipelines | 2 |
-| Terraform Resources | 20+ |
+| Terraform Resources | 17 |
 | Kubernetes Cluster | Amazon EKS |
 | Deployment Strategy | GitOps |
 
